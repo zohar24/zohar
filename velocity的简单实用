@@ -1,0 +1,94 @@
+1. 关于date，如下所示：
+    函数举例显示结果
+    $date            2008-04-22                           
+    $date.long            2008年4月22日 下午10时58分54秒                           
+    $date.medium_time            22:58:54                            
+    $date.full_date            2008年4月22日 星期二                           
+    $date.yyyy            2008                           
+    $date.get('default','short')            2008-4-22 下午10:58          
+    $date.get('yyyy-M-d H:m:s')            2008-4-22 22:58:54                
+    $date.whenIs('2008-04-20')            2 days 22 hours ago                
+    $date.whenIs('2008-04-20').full            2 days 22 hours 58 minutes 54 seconds 484 milliseconds ago   
+
+    $date.whenIs('2008-04-20').days            -2                           
+    $date.whenIs('2008-04-20')            22 hours 58 minutes ago            
+    $date.whenIs('2008-04-20','2008-04-20')            same time
+    $date.difference('2008-04-20', '2008-04-20')            2 days
+    $date.whenIs('2008-04-20').days            -2          
+    
+2.关于math，如下所示：
+
+    函数举例显示结果
+
+    $math.add("10","4")            14                 
+    $math.sub("100","20")            80                            
+    $math.mul("11","7")            77                            
+    $math.div("100","5")            20                            
+    $math.idiv("100","5")            20                            
+    $math.pow("2","5")            32                            
+    $math.mod("13","5")            3                            
+    $math.max("99","16")            99                            
+    $math.min("99","16")            16                            
+    $math.abs("-99")            99                            
+    $math.cell("99.26")            $math.cell("99.26")                            
+    $math.floor("99.26")            99                            
+    $math.random            0.7663665545444911                            
+    $math.random("1","10")            2                            
+    $math.roundTo("2","5")            5.0                            
+    $math.toInteger("15")            15                            
+    $math.toDouble("15")            15.0                            
+    $math.toNumber("15")            15   
+    
+3.关于number，如下所示：
+    函数举例显示结果
+    $number            org.apache.velocity.tools.generic.NumberTool@32c41c
+    $number.currency("35")            ￥35.00                            
+    $number.format            #0.0                            
+    $number.locale            zh_CN                            
+    $number.format("35")            35.0                            $number.integer("35.47")            35                            
+    $number.number("35.47")            35.47                            
+    $number.percent("0.3547")            35%                            
+    $number.toNumber("35.47")            35.47       
+    
+4.关于sorter，如下所示：
+    函数举例显示结果
+
+    $sorter.sort(['d','a','b','c'])            [a, b, c, d]             
+    $sorter.sort([5,1,12,3])            [1, 3, 5, 12] 
+    sorter工具，可以对指定的集合进行排序，如List，Array，Map等等。
+
+5.关于esc，如下所示：
+
+    函数举例显示结果
+    $esc            org.apache.velocity.tools.generic.EscapeTool@e09a07                            
+    $esc.b            \                            
+    $esc.backslash            \                            
+    $esc.d            $                            
+    $esc.dollar            $                            
+    $esc.e            !                            
+    $esc.exclamation            !                            
+    $esc.h            #                            
+    $esc.hash            #                            
+    $esc.q            "                            
+    $esc.quote            "                            \esc.s            esc.s                            
+
+    $esc.singleQuote            '                            $esc.html("$esc.backslash")            \ 
+
+    $esc.url("shirdrn.org/users/index.vm?id=1&name=异域王者")            shirdrn.org%2Fusers%2Findex.vm%3Fid%3D1%26name%3D%E5%BC%82%E5%9F%9F%E7%8E%8B%E8%80%85                            
+
+    $esc.sql("SELECT * FROM PERSON WHERE ID='2008042319831'")            SELECT * FROM PERSON WHERE ID=''2008042319831''
+
+    \$esc.java()            [说明]Escapes the characters in a String using Java String rules.            
+
+    \$esc.javascript()            [说明]Escapes the characters in a String using JavaScript String rules.                        
+
+    \$esc.xml()            [说明]Escapes the characters in a String using XML entities.                            
+
+    \$esc.propertyKey()            [说明]Escapes the characters in a String using java.util.Properties rules for escaping keys.                            
+
+    \$esc.propertyValue()            [说明]Escapes the characters in a String using java.util.Properties rules for escaping values.
+
+    作者：不要变成发抖的小喵喵喵喵喵喵
+    链接：http://www.jianshu.com/p/ed8f41808606
+    來源：简书
+    著作权归作者所有。
